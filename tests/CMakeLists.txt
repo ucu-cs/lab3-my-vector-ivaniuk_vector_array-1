@@ -22,9 +22,20 @@ target_link_libraries(array-tests
         my_array
 )
 
+add_executable(unique-ptr-tests
+        unique_ptr_tests.cpp
+)
+
+target_link_libraries(unique-ptr-tests
+        PRIVATE
+        GTest::gtest
+        GTest::gtest_main
+        my_smart_pointers
+)
 
 include_directories(../include)
 
 enable_testing()
 add_test(NAME vector-tests COMMAND vector-tests)
 add_test(NAME array-tests COMMAND array-tests)
+add_test(NAME unique-ptr-tests COMMAND unique-ptr-tests)

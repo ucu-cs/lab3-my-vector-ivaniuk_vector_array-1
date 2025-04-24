@@ -67,7 +67,6 @@ add_library(
 add_library(
 		my_smart_pointers INTERFACE
 		${CMAKE_CURRENT_SOURCE_DIR}/include/smart_pointers/my_unique_ptr.hpp
-		include/smart_pointers/my_weak_ptr.hpp
 )
 
 #! Project main executable source compilation

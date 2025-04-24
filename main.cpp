@@ -56,6 +56,7 @@ int main() {
       << "my_vector push took " << my_ms  << " ns (sum=" << my_sum << ")\n"
       << "std::vector push took " << std_ms  << " ns (sum=" << std_sum << ")\n";
   std::unique_ptr<int> p = std::make_unique<int>(42);
+  std::shared_ptr<int> sp = std::make_shared<int>(42);
 
   return 0;
 }
