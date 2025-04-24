@@ -1,44 +1,37 @@
-<mark>Template for your README. Remove all unused parts and instructions</mark>
-
-# Lab work <mark>NUMBER</mark>: <mark>SHORT TOPIC</mark>
-Authors (team): <mark>AUTHORS WITH GITHUB LINKS</mark><br>
-Variant: <mark>VARIANT SHOULD BE HERE</mark>
+# Lab work <mark>3</mark>: <mark>My vector, my array, smart pointers</mark>
+Authors (team): Oleksandr Ivaniuk
 ## Prerequisites
 
-<mark>LIST LIBRARIES/TOOLS/OTHER UTILITIES THAT NEED TO BE INSTALLED (E.G. GCC, OPENMP, CMAKE ETC)</mark>
+```
+sudo apt-get install libgtest-dev
+```
 
 ### Compilation
 
-<mark>HOW TO COMPILE YOUR PROGRAM? (RECOMMENDED: ./compile.sh -- use `./compile.sh -h` for info)</mark>
-
-### Installation
-
-<mark>DESCRIBE THE INSTALLATION PROCESS (USE ./dependencies FOLDER)</mark>
-
-<mark>Note: For Python scripts, You must add `requirements.txt` 
-file and add your env to the `.gitignore` file!</mark>
+```shell
+mkdir build
+cd build
+cmake .. 
+make -j4
+```
 
 ### Usage
-
-<mark>PROVIDE AN EXAMPLE OF HOW TO RUN YOUR PROGRAM (IT CAN BE A_flag COMMAND LINE WITH INPUT AND EXPECTED OUTPUT)</mark>
-
-<mark>Note: if your project needs or generates any data, media and so on -- put them
-into the data folder</mark> 
-
-### Important!
-
-<mark>WHAT ELSE SHOULD WE KNOW ABOUT YOUR WORK? (E.G. KNOWN ISSUES, BUGS, SPECIAL BEHAVIOR ETC)</mark>
+Tests:
+```
+./tests/vector-tests
+./tests/array-tests
+./tests/unique-ptr-tests
+```
+Also for time measurement:
+```shell
+./vector-array
+```
 
 ### Results
-
-<mark>DESCRIBE THE RESULTS OF THE WORK YOU DID. WHAT DID YOU LEARN OR FIND INTERESTING?</mark>
+![img.png](images/img.png)  
+As we can see my vector is a little bit faster than std::vector. It probably because of fewer count of checks.
 
 # Additional tasks
-<mark>IF APPLICABLE, LIST ALL THE EXTRA FEATURES YOU ADDED. PROVIDE DETAILS<mark>
-
-# ATTENTION!
-  
-Additional tasks not listed in the previous paragraph would not be graded.
-
-Be sure to provide a complete list of authors.
+Comparison of my vector and std::vector.
+Smart pointer (only unique ptr)
 
